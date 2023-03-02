@@ -15,4 +15,4 @@ project diagram of Haikal System
 
 
 Postman QR Code
-![Haikal-Postman](https://user-images.githubusercontent.com/90826746/222380911-b7923c77-3b7a-4278-87bd-b6da9e607668.png)
+![Haikal-Postman-small](https://user-images.githubusercontent.com/90826746/222381235-d9c6b85a-3518-4a12-b35e-33d235f43095.png)
