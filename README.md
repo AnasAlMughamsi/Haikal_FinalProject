@@ -34,9 +34,14 @@ from the Diagram the project containe 6 classes: -
   - Spring security
   - JUnit test
 
+
 ## Postman QR Code
 <p align="center"> 
-  <img src="https://user-images.githubusercontent.com/90826746/222381235-d9c6b85a-3518-4a12-b35e-33d235f43095.png" width="30%">
+  <img src="https://user-images.githubusercontent.com/90826746/222399901-3ff08030-46a6-4649-8b07-0223802039be.png" width="30%">
 </p>
+
+Link
+---
+POSTMAN: https://documenter.getpostman.com/view/20437573/2s93CSoqnZ
 
 
