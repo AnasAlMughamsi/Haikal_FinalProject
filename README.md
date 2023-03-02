@@ -7,7 +7,7 @@ connecting the customer and cars store in very simple way.
  - Anas Al-Mughamisi
  - Adel Al-Shaya 
 
-## Project Diagram  
+## Project Diagram 🔬
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/90826746/222380250-4063d3f8-8609-4c08-9b06-8a963014a874.png" width="50%">
