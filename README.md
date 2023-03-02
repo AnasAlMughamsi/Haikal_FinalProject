@@ -7,8 +7,13 @@ project diagram of Haikal System
 
 ![Project drawio (1)](https://user-images.githubusercontent.com/90826746/222380250-4063d3f8-8609-4c08-9b06-8a963014a874.png)
 
-
-
+from the Diagram the project containe 6 classes: -
+  - User
+  - Customer 
+  - Store
+  - Product
+  - Product details
+  - Order
 
 
 
