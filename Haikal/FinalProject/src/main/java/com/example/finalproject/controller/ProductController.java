@@ -58,7 +58,7 @@ public class ProductController
         return ResponseEntity.status(HttpStatus.OK).body("Product deleted !");
     }
     @PostMapping("/add-product/{store_id}/{product_id}")
-    public ResponseEntity<String> deleteProduct(@PathVariable Integer store_id, @PathVariable Integer product_id,
+    public ResponseEntity<String> assignProductToStore(@PathVariable Integer store_id, @PathVariable Integer product_id,
                                                 @AuthenticationPrincipal MyUser myUser) {
         productService.assignProductToStore(store_id, product_id, myUser.getId());
         return ResponseEntity.status(HttpStatus.OK).body("Assign product to store");

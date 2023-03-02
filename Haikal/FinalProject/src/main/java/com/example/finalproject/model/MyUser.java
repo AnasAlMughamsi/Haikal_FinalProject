@@ -25,10 +25,10 @@ public class MyUser implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-//    @NotEmpty(message = "username is required")
+    @NotEmpty(message = "username is required")
     private String username;
 
-//    @NotEmpty(message = "password is required")
+    @NotEmpty(message = "password is required")
     private String password;
 
     @Pattern(regexp = "(customer|store|admin)" , message = "role must be customer or admin")

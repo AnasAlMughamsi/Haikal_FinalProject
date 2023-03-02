@@ -36,7 +36,8 @@ public class SecurityConfig {
                 .authenticationProvider(daoAuthenticationProvider())
                 .authorizeHttpRequests()
                 .requestMatchers(HttpMethod.POST,"/api/v1/user/register/**", "/api/v1/user/logout").permitAll()
-//                .requestMatchers( "/api/v1/customer", "/api/v1/customer/**").hasAuthority("customer")
+                .requestMatchers(  "/api/v1/customer/**").hasAuthority("customer")
+                .requestMatchers("/api/v1/store/**").hasAuthority("store")
                 .requestMatchers("/api/v1/admin", "/api/v1/admin/**").hasAuthority("admin")
                 .anyRequest().authenticated()
                 .and()
@@ -48,8 +49,3 @@ public class SecurityConfig {
         return http.build();
     }
 }
-//.requestMatchers(HttpMethod.POST, "/api/v1/store/**").hasAuthority("store")
-//                .requestMatchers("/api/v1/admin/**", "/api/v1/admin/all-users").hasAuthority("ADMIN")
-
-//.requestMatchers( "/api/v1/customer", "/api/v1/customer/**").hasAuthority("customer")
-//                .requestMatchers("/api/v1/admin/**").hasAuthority("admin")

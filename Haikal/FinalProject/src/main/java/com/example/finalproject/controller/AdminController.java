@@ -8,9 +8,11 @@ import com.example.finalproject.service.CustomerService;
 import com.example.finalproject.service.MyUserDetailsService;
 import com.example.finalproject.service.MyUserService;
 import com.example.finalproject.service.StoreService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -64,5 +66,19 @@ public class AdminController {
     public ResponseEntity changeStoreStatus(@PathVariable Integer store_id) {
         storeService.changeStoreStatus(store_id);
         return ResponseEntity.status(200).body("change store status");
+    }
+
+// =========================== update/delete ===========================
+    @PutMapping("/update/{id}")
+    public ResponseEntity<String> updateUser(@PathVariable Integer id, @Valid @RequestBody MyUser updateUser,
+                                             @AuthenticationPrincipal MyUser myUser) {
+        myUserService.updateMyUser(updateUser, id, myUser.getId());
+        return ResponseEntity.status(200).body("User updated!");
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<String> deleteUser(@PathVariable Integer id) {
+        myUserService.deleteMyUser(id);
+        return ResponseEntity.status(200).body("User deleted!");
     }
 }

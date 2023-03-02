@@ -42,11 +42,14 @@ public class MyUserService {
     }
 
 
-    public void updateMyUser(MyUser updateMyUser, Integer id) {
+    public void updateMyUser(MyUser updateMyUser, Integer id, Integer auth_int) {
         MyUser user = userRepository.findMyUserById(id);
         if(user == null) {
             throw new ApiException("user not found, wrong id");
+        } else if(user.getId() != auth_int) {
+            throw new ApiException("Unauthorized");
         }
+
         updateMyUser.setId(id);
         userRepository.save(updateMyUser);
     }

@@ -22,29 +22,6 @@ public class UserController {
 
     private final MyUserService myUserService;
 
-//    @GetMapping("/all")
-//    public ResponseEntity<List<MyUser>> getAllUsers() {
-//        List<MyUser> customers = myUserService.getAllMyUsers();
-//        return ResponseEntity.status(200).body(customers);
-//    }
-//
-//    @GetMapping("/get")
-//    public ResponseEntity getUserById(@AuthenticationPrincipal MyUser myUser) {
-//        return ResponseEntity.status(200).body(myUserService.getMyUserById(myUser.getId()));
-//    }
-//
-//
-//    @PutMapping("/update/{id}")
-//    public ResponseEntity<String> updateUser(@PathVariable Integer id, @Valid @RequestBody MyUser updateUser) {
-//        myUserService.updateMyUser(updateUser, id);
-//        return ResponseEntity.status(200).body("User updated!");
-//    }
-//
-//    @DeleteMapping("/delete/{id}")
-//    public ResponseEntity<String> deleteUser(@PathVariable Integer id) {
-//
-//        return ResponseEntity.status(200).body("User deleted!");
-//    }
 
     @PostMapping("/login")
     public ResponseEntity customerLogin(@AuthenticationPrincipal MyUser myUser) {

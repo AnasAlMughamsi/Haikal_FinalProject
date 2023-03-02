@@ -17,6 +17,7 @@ public class CustomerDTO {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+
     private String username;
     private String password;
     private String firstName;

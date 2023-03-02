@@ -87,7 +87,7 @@ public class ProductService
         Product product = productRepository.findProductById(product_id);
         if(store == null || product == null) {
             throw new ApiException("Store or product not found!");
-        } else if(store.getUser().getId() != auth_id) {
+        } else if(store.getUser().getId() == auth_id) {
             throw new ApiException("you have no right to assign product!");
         }
         product.setStore_owner(store);
